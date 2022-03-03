@@ -34,10 +34,10 @@ namespace SimpleApi
             services.Configure<GitHubSettings>(Configuration.GetSection(nameof(GitHubSettings)));
             // this might not be a good idea if your using a live cert store (ie azure or aws you might want to parse the options)
             services.AddSingleton(t => t.GetService<IOptions<GitHubSettings>>().Value); 
-            services.AddHttpClient<IGithubUserInfo, GithubInfoService>();
+          //  services.AddHttpClient<IGithubUserInfo, GithubInfoService>();
 
-            
-       
+          services.AddScoped<IGithubUserInfo, GithubInfoFromFile>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
