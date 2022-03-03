@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "ad564bda-7b78-453e-b821-a197cc29142a",
+		"name": "ExampleGithubApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GithubInfo With Route",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Example/GithubInfo2/mkbmain",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Example",
+						"GithubInfo2",
+						"mkbmain"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GithubInfo with query",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Example/GithubInfo?name=mkbmain",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Example",
+						"GithubInfo"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "mkbmain"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Githhubinfo post",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
