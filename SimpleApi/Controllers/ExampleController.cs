@@ -43,6 +43,7 @@ namespace SimpleApi.Controllers
         [HttpPost] // with no route will just be contoller 
         public async Task<IActionResult> PostExample([FromBody] ExamplePostRequest model)
         {
+            // this is not a post but as example
             var result = await _githubUserInfoService.GetGitHubInfo(model.Name);
             return HandleResponse(result);
         }
